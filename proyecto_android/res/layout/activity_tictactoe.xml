@@ -85,9 +85,7 @@
 
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:ems="10"
+            
             android:text="Jugador 1" >
 
             <requestFocus />
