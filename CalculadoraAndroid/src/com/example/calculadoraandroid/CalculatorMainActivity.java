@@ -19,7 +19,7 @@ public class CalculatorMainActivity extends Activity {
 	public String im(String a){
 		float p=Float.parseFloat(a); 
 		p*=-1; 
-		p=(float) Math.sqrt(p); 
+		//p=(float) Math.sqrt(p); 
 		a=p+"i"; 
 
 		return a; 
@@ -83,7 +83,7 @@ public class CalculatorMainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE); 
+        //requestWindowFeature(Window.FEATURE_NO_TITLE); 
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_calculator_main);
         setContentView(R.layout.activity_calculator_main); 
@@ -221,7 +221,7 @@ public class CalculatorMainActivity extends Activity {
         } 
         }); 
         //Boton . 
-        final Button botonpunto=(Button)findViewById(R.id.Botonpunto); 
+        /*final Button botonpunto=(Button)findViewById(R.id.Botonpunto); 
 
 
         botonpunto.setOnClickListener(new View.OnClickListener() { 
@@ -236,7 +236,7 @@ public class CalculatorMainActivity extends Activity {
         Resultado.setText(get()); 
 
         } 
-        }); 
+        });*/ 
         //Boton 1 
         final Button boton0=(Button)findViewById(R.id.Boton0); 
 
@@ -358,7 +358,7 @@ public class CalculatorMainActivity extends Activity {
 
         } 
         }); 
-        final Button sqrt=(Button)findViewById(R.id.Botonsqrt); 
+        /*final Button sqrt=(Button)findViewById(R.id.Botonsqrt); 
 
 
         sqrt.setOnClickListener(new View.OnClickListener() { 
@@ -379,8 +379,8 @@ public class CalculatorMainActivity extends Activity {
         } 
 
         } 
-        }); 
-        final Button del=(Button)findViewById(R.id.DEL); 
+        });*/ 
+        /*final Button del=(Button)findViewById(R.id.DEL); 
 
 
         del.setOnClickListener(new View.OnClickListener() { 
@@ -393,7 +393,7 @@ public class CalculatorMainActivity extends Activity {
 
 
         } 
-        }); 
+        });*/ 
         final Button Ce=(Button)findViewById(R.id.CE); 
         Ce.setOnClickListener(new View.OnClickListener() { 
 
@@ -426,7 +426,7 @@ public class CalculatorMainActivity extends Activity {
 
         } 
         }); 
-        final Button exp=(Button)findViewById(R.id.Botonexp); 
+        /*final Button exp=(Button)findViewById(R.id.Botonexp); 
         exp.setOnClickListener(new View.OnClickListener() { 
 
         public void onClick(View v) { 
@@ -440,7 +440,7 @@ public class CalculatorMainActivity extends Activity {
 
 
         } 
-        }); 
+        });*/ 
 
 
 

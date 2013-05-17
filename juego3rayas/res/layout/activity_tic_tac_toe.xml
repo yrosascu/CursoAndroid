@@ -1,0 +1,109 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent"  
+      
+  
+    >  
+    <TableRow>  
+        <ImageButton android:id="@+id/btn1"  
+            android:layout_width="50px"   
+    		android:layout_height="50px"  
+    		android:layout_margin="10px"  
+    		android:clickable="true"  
+    		android:tag="1"  
+    		android:background="@drawable/xo"  
+      
+ 		/>  
+   
+		<ImageButton android:id="@+id/btn2"  
+ 			android:layout_width="50px"   
+    		android:layout_height="50px"  
+    		android:layout_margin="10px"  
+    		android:clickable="true"  
+    		android:tag="2"  
+ 			android:background="@drawable/xo"  
+      
+		 />   
+		<ImageButton android:id="@+id/btn3"  
+ 			android:layout_width="50px"   
+    		android:layout_height="50px"  
+    		android:layout_margin="10px"  
+    		android:clickable="true"  
+    		android:tag="3"  
+ 			android:background="@drawable/xo"  
+   
+  
+ 		/>  
+ 	</TableRow>  
+ 		<TableRow>  
+			<ImageButton android:id="@+id/btn4"  
+ 				android:layout_width="50px"   
+    			android:layout_height="50px"  
+    			android:layout_margin="10px"  
+    			android:clickable="true"  
+    			android:tag="4"  
+ 				android:background="@drawable/xo"  
+	      
+ 			/>  
+			<ImageButton android:id="@+id/btn5"  
+ 				android:layout_width="50px"   
+    			android:layout_height="50px"  
+    			android:layout_margin="10px"  
+    			android:clickable="true"  
+    			android:tag="5"  
+ 				android:background="@drawable/xo"  
+      
+			 />  
+			<ImageButton android:id="@+id/btn6"  
+ 				android:layout_width="50px"   
+    			android:layout_height="50px"  
+    			android:layout_margin="10px"  
+    			android:clickable="true"  
+    			android:tag="6"  
+ 				android:background="@drawable/xo"  
+      
+			 />  
+  
+	</TableRow>  
+ 		<TableRow>  
+			<ImageButton android:id="@+id/btn7"  
+ 				android:layout_width="50px"   
+    			android:layout_height="50px"  
+    			android:layout_margin="10px"  
+    			android:clickable="true"  
+    			android:tag="7"  
+ 				android:background="@drawable/xo"  
+	      
+ 			/>  
+			<ImageButton android:id="@+id/btn8"  
+ 				android:layout_width="50px"   
+    			android:layout_height="50px"  
+    			android:layout_margin="10px"  
+    			android:clickable="true"  
+    			android:tag="8"  
+ 				android:background="@drawable/xo"  
+      
+ 			/>  
+			<ImageButton android:id="@+id/btn9"  
+ 				android:layout_width="50px"   
+    			android:layout_height="50px"  
+    			android:layout_margin="10px"  
+    			android:clickable="true"  
+    			android:tag="9"  
+ 				android:background="@drawable/xo"  
+      
+ 			/>  
+  
+	</TableRow>  
+		<TextView android:id="@+id/subtitle"   
+  			android:text="Turn : Player 1"  
+		/>  
+	<TableRow>  
+		<Button android:onClick="close"  
+ 			android:text="Exit"  
+		/>  
+		<Button android:onClick="restart"  
+ 			android:text="Restart"  
+		/>  
+</TableRow>  
+</TableLayout>    

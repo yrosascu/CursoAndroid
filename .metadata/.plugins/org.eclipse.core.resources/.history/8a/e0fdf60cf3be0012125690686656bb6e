@@ -1,0 +1,130 @@
+package com.example.juego3rayas;
+
+  
+import android.app.Activity;  
+import android.os.Bundle;  
+import android.view.Menu;  
+import android.view.View;  
+import android.view.View.OnClickListener;  
+import android.widget.ImageButton;  
+import android.widget.TextView;  
+import java.util.Arrays;
+  
+public class TicTacToe extends Activity {  
+ int count;  
+ int[][] win={{1,2,3},{4,5,6},{7,8,9},{1,4,7},{2,5,8},{3,6,9},{1,5,9},{3,5,7}};  
+ int[] arrx = new int[5];  
+ int xcount,ocount;  
+ int[] arro = new int[5];  
+     
+    @Override  
+    public void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.activity_tic_tac_toe);  
+        
+    }  
+  
+    public TicTacToe(){  
+     count=0;  
+     xcount=0;  
+     ocount=0;  
+ Arrays.fill(arrx,0);   
+ Arrays.fill(arro,0);  
+    ImageButton x = (ImageButton) this.findViewById(R.id.btn1);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn2);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn3);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn4);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn5);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn6);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn7);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn8);  
+     x.setOnClickListener(listener);  
+     x = (ImageButton) this.findViewById(R.id.btn9);  
+     x.setOnClickListener(listener);  
+    }  
+      
+    public void stop(){  
+     ImageButton x = (ImageButton) this.findViewById(R.id.btn1);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn2);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn3);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn4);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn5);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn6);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn7);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn8);  
+     x.setClickable(false);  
+     x = (ImageButton) this.findViewById(R.id.btn9);  
+     x.setClickable(false);  
+    }  
+  
+    private OnClickListener listener = new OnClickListener() {  
+       
+        public void onClick(View v) {  
+         ImageButton b= (ImageButton) v;  
+         TextView tv =(TextView)findViewById(R.id.subtitle);  
+         if(count%2==0){  
+          b.setBackgroundResource(R.drawable.x);  
+          arrx[xcount]=Integer.parseInt((String)b.getTag());  
+          b.setClickable(false);  
+          tv.setText("Turn : Player 2");  
+          count++;  
+          xcount++;  
+          if(xcount>=3){  
+          for(int i=0;i<8;i++){  
+          if(Arrays.toString(arrx).contains(String.valueOf(win[i][0]))&&Arrays.toString(arrx).contains(String.valueOf(win[i][1]))&&Arrays.toString(arrx).contains(String.valueOf(win[i][2])))  
+            {  
+             stop();  
+             tv.setText("Player 1 Wins!");  
+            }  
+          }  
+          }  
+            
+         }  
+         else  
+         {  
+          b.setBackgroundResource(R.drawable.o);  
+          arro[ocount]=Integer.parseInt((String)b.getTag());  
+          b.setClickable(false);  
+          tv.setText("Turn : Player 1");  
+          count++;  
+          ocount++;  
+          if(ocount>=3){  
+              for(int i=0;i<8;i++){  
+              if(Arrays.toString(arro).contains(String.valueOf(win[i][0]))&&Arrays.toString(arro).contains(String.valueOf(win[i][1]))&&Arrays.toString(arro).contains(String.valueOf(win[i][2])))  
+                {  
+                 stop();  
+                 tv.setText("Player 2 Wins!");  
+                }  
+              }  
+              }  
+         }  
+        }  
+    };  
+  
+    public void close(View v){  
+     finish();  
+    }  
+    public void restart(View v){  
+     setContentView(R.layout.activity_tic_tac_toe);  
+        init();  
+    }   
+    public boolean onCreateOptionsMenu(Menu menu) {  
+    	// Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.tic_tac_toe, menu);
+        return true;  
+    }  
+}  

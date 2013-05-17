@@ -35,17 +35,13 @@ public final class R {
         public static final int Boton8=0x7f08000a;
         public static final int Boton9=0x7f08000b;
         public static final int Botondiv=0x7f080004;
-        public static final int Botonexp=0x7f080011;
-        public static final int Botonigual=0x7f080012;
+        public static final int Botonigual=0x7f08000f;
         public static final int Botonmulti=0x7f080008;
-        public static final int Botonpunto=0x7f08000e;
-        public static final int Botonresta=0x7f08000f;
-        public static final int Botonsqrt=0x7f080010;
+        public static final int Botonresta=0x7f080010;
         public static final int Botonsuma=0x7f08000c;
-        public static final int CE=0x7f080014;
-        public static final int DEL=0x7f080013;
+        public static final int CE=0x7f08000e;
         public static final int Resultado=0x7f080000;
-        public static final int action_settings=0x7f080015;
+        public static final int action_settings=0x7f080011;
     }
     public static final class layout {
         public static final int activity_calculator_main=0x7f030000;
